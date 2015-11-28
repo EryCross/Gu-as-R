@@ -1,0 +1,215 @@
+\documentclass[10pt,a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\maketitle
+\newpage
+
+
+UNIDAD 5: Practica 23 - Prueba de hip?tesis estad?sticas. Dos poblaciones. 
+
+PRUEBAS SOBRE DOS MUESTRAS INDEPENDIENTES
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#Volviendo al problema de la importancia del estadonutricional (introducido en la practica 21) en }
+\hlcom{#pacientes diab?ticos (pacientes) y saludables (grupo control) con complicaciones. Los datos se }
+\hlcom{#muestran en los siguientes cuadros.}
+
+\hlcom{#Las hip?tesis a contrastar son:}
+\hlcom{#H0:??1=??2}
+\hlcom{#H1:??1?????2}
+
+\hlcom{#En lenguaje R est? implementada la prueba t, el siguiente c?digo ejemplo la calcula para las dos }
+\hlcom{#muestras:}
+
+\hlcom{# Primero digitamos las observaciones correspondientes a ambas muestras }
+\hlstd{IMC_Control} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{23.6}\hlstd{,} \hlnum{22.7}\hlstd{,} \hlnum{21.2}\hlstd{,} \hlnum{21.7}\hlstd{,} \hlnum{20.7}\hlstd{,} \hlnum{22.0}\hlstd{,} \hlnum{21.8}\hlstd{,} \hlnum{24.2}\hlstd{,} \hlnum{20.1}\hlstd{,} \hlnum{21.3}\hlstd{,} \hlnum{20.5}\hlstd{,} \hlnum{21.1}\hlstd{,} \hlnum{21.4}\hlstd{,} \hlnum{22.2}\hlstd{,} \hlnum{22.6}\hlstd{,}
+                 \hlnum{20.4}\hlstd{,} \hlnum{23.3}\hlstd{,} \hlnum{24.8}\hlstd{)}
+\hlstd{IMC_Pacientes} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{25.6}\hlstd{,} \hlnum{22.7}\hlstd{,} \hlnum{25.9}\hlstd{,} \hlnum{24.3}\hlstd{,} \hlnum{25.2}\hlstd{,} \hlnum{29.6}\hlstd{,} \hlnum{21.3}\hlstd{,} \hlnum{25.5}\hlstd{,} \hlnum{27.4}\hlstd{,} \hlnum{22.3}\hlstd{,} \hlnum{24.4}\hlstd{,} \hlnum{23.7}\hlstd{,} \hlnum{20.6}\hlstd{,} \hlnum{22.8}\hlstd{)}
+
+\hlcom{# Realizamos el contraste de igualdad de medias }
+\hlkwd{t.test}\hlstd{(IMC_Control, IMC_Pacientes,} \hlkwc{var.equal}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{mu}\hlstd{=}\hlnum{0}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Two Sample t-test
+## 
+## data:  IMC_Control and IMC_Pacientes
+## t = -3.5785, df = 30, p-value = 0.001198
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -3.770935 -1.030653
+## sample estimates:
+## mean of x mean of y 
+##  21.97778  24.37857
+\end{verbatim}
+\begin{alltt}
+\hlcom{#Se concluye entonces que existe diferencia significativa en el IMC para ambos grupos de pacientes, }
+\hlcom{#pues el p valor de la prueba resulta ser muy peque?o.}
+
+\hlcom{#PRUEBAS SOBRE DOS MUESTRAS PAREADAS }
+\hlcom{#Se cuenta con los datos simulados (con fines did?cticos), de las observaciones de la presi?n }
+\hlcom{#arterial sist?lica (PAS) en un grupo de 10 pacientes antes y despu?s de un tratamiento consistente en }
+\hlcom{#una dieta especial de bajosodio y medicamentos.}
+
+\hlcom{#Las hip?tesis a contrastar son:}
+\hlcom{#H0:??1=??2}
+\hlcom{#H1:??1?????2}
+
+\hlcom{#El c?digo en lenguaje R para calcular la prueba t para dos muestras apareadas es el siguiente: }
+\hlstd{PAS.antes} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{160}\hlstd{,}\hlnum{155}\hlstd{,}\hlnum{180}\hlstd{,}\hlnum{140}\hlstd{,}\hlnum{150}\hlstd{,}\hlnum{130}\hlstd{,}\hlnum{190}\hlstd{,}\hlnum{192}\hlstd{,}\hlnum{170}\hlstd{,}\hlnum{165}\hlstd{)}
+\hlstd{PAS.despues} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{139}\hlstd{,}\hlnum{135}\hlstd{,}\hlnum{175}\hlstd{,}\hlnum{120}\hlstd{,}\hlnum{145}\hlstd{,}\hlnum{140}\hlstd{,}\hlnum{170}\hlstd{,}\hlnum{180}\hlstd{,}\hlnum{149}\hlstd{,}\hlnum{146}\hlstd{)}
+
+\hlcom{#verificando la normalidad }
+\hlkwd{shapiro.test}\hlstd{(PAS.antes)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  PAS.antes
+## W = 0.97021, p-value = 0.8928
+\end{verbatim}
+\begin{alltt}
+\hlkwd{shapiro.test}\hlstd{(PAS.despues)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  PAS.despues
+## W = 0.92548, p-value = 0.4049
+\end{verbatim}
+\begin{alltt}
+\hlkwd{ks.test}\hlstd{(PAS.antes,}\hlstr{"pnorm"}\hlstd{,}\hlkwc{mean}\hlstd{=}\hlkwd{mean}\hlstd{(PAS.antes),}\hlkwc{sd}\hlstd{=}\hlkwd{sd}\hlstd{(PAS.antes))}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	One-sample Kolmogorov-Smirnov test
+## 
+## data:  PAS.antes
+## D = 0.10476, p-value = 0.9992
+## alternative hypothesis: two-sided
+\end{verbatim}
+\begin{alltt}
+\hlkwd{ks.test}\hlstd{(PAS.despues,}\hlstr{"pnorm"}\hlstd{,}\hlkwc{mean}\hlstd{=}\hlkwd{mean}\hlstd{(PAS.despues),}\hlkwc{sd}\hlstd{=}\hlkwd{sd}\hlstd{(PAS.despues))}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	One-sample Kolmogorov-Smirnov test
+## 
+## data:  PAS.despues
+## D = 0.21871, p-value = 0.6495
+## alternative hypothesis: two-sided
+\end{verbatim}
+\begin{alltt}
+\hlcom{#realizando la prueba t}
+\hlkwd{t.test}\hlstd{(PAS.antes, PAS.despues,} \hlkwc{paired}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{mu}\hlstd{=}\hlnum{0}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Paired t-test
+## 
+## data:  PAS.antes and PAS.despues
+## t = 4.0552, df = 9, p-value = 0.002862
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   5.880722 20.719278
+## sample estimates:
+## mean of the differences 
+##                    13.3
+\end{verbatim}
+\begin{alltt}
+\hlcom{#El valor del estad?stico t es 4.0552, con gl = 9, P = 0.0029. Con estos resultados se rechaza  0 Hy por lo }
+\hlcom{#tanto se concluye que la PAS antes y despu?s del tratamiento es distinta, es decir, el tratamiento ha }
+\hlcom{#sido efectivo.}
+
+
+\hlcom{#PRUEBA DE HIP?TESIS ACERCA DE LA VARIANZA DE DOS POBLACIONES }
+\hlcom{#El director de una sucursal de una compa??a deseguros espera que dos de sus mejores agentes }
+\hlcom{#consigan formalizar por t?rmino medio el mismo n?mero de p?lizas mensuales.}
+\hlcom{#Los datos indican las p?lizas formalizadas en los ?ltimos 5 meses por ambos agentes. }
+
+
+\hlcom{#introduciendo los datos }
+\hlstd{Agente_A} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{12}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{18}\hlstd{,} \hlnum{16}\hlstd{,} \hlnum{13}\hlstd{)}
+\hlstd{Agente_B} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{14}\hlstd{,} \hlnum{18}\hlstd{,} \hlnum{18}\hlstd{,} \hlnum{17}\hlstd{,} \hlnum{16}\hlstd{)}
+\hlcom{# realizando el contraste de igualdad de varianzas }
+\hlkwd{var.test}\hlstd{(Agente_A, Agente_B)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	F test to compare two variances
+## 
+## data:  Agente_A and Agente_B
+## F = 3.0357, num df = 4, denom df = 4, p-value = 0.3075
+## alternative hypothesis: true ratio of variances is not equal to 1
+## 95 percent confidence interval:
+##   0.3160711 29.1566086
+## sample estimates:
+## ratio of variances 
+##           3.035714
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+Practica 09-Analisis de unavariable bidimensional categorica.
+
+REALICE UN AN?LISIS ESTAD?STICO DE LOS DATOS.
+Leer o recuperar este archivo con la funci?n read.table() 
+<<>>=
+HojaCat <- read.csv("HojaCat.csv", strip.white=TRUE);HojaCat
+@
+
+Conecta la hoja de datos a la segunda ruta o lista de b?squeda. 
+<<>>=
+attach(HojaCat, pos=2)
+search() 
+@
+
+Crea una tabla de contigencia o de doble entrada 
+<<>>=
+tablaCont <- table(HojaCat); tablaCont 
+length(HojaCat)
+@
+
+ Encuentra la suma de cada filade la tabla de contingencia 
+ Distribuci?n marginal de X=Estado civil 
+<<>>=
+suma.filas <- apply(tablaCont, 1, sum); suma.filas
+@
+
+ Encuentra la suma de cada filade la tabla de contingencia 
+ distribuci?n marginal de Y=Ocupaci?n 
+<<>>=
+suma.columnas <- apply(tablaCont,2,sum); suma.columnas
+@
+
+ Gr?ficos de barras para tabla de contingencia. 
+ Barras apiladas 
+<<>>=
+barplot(t(tablaCont), main="Gr?fico de barras (Estado, Ocupaci?n)", xlab="Estado civil", 
+ylab="Ocupaci?n", legend.text=TRUE)
+@
+
+ Barras agrupadas 
+<<>>=
+barplot(t(tablaCont), main="Gr?fico de barras (Estado, Ocupaci?n)", xlab="Estado civil", 
+ylab="Ocupaci?n", beside=TRUE, legend.text=TRUE)
+@
+
+Al usar beside =FALSE se obtiene el mismo gr?fico de la instrucci?n anterior.
+<<>>=
+barplot(tablaCont, main="Gr?fico de barras (Ocupaci?n, Estado)", xlab="Ocupaci?n\n", 
+ylab="Estado civil", beside=TRUE, legend.text=TRUE)
+@
+
+Calcula tablas de proporciones o de probabilidades. 
+<<>>=
+op <- options() 
+options(digits=3) 
+options('digits')
+@
+
+ 
+\end{document}
+
+
+

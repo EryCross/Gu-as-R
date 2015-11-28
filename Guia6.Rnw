@@ -1,0 +1,34 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+<<>>=
+Tipo <- c("CC", "PC", "SC"); Tipo
+Consumo <- sample(Tipo, 20, replace=TRUE); Consumo
+data.entry(Consumo) 
+write(Consumo, "Consumo.txt") 
+ls()
+rm(list=ls(all=TRUE))
+ls()
+Consumo <- scan("Consumo.txt", what = character(), na.strings = "NA", flush=FALSE);Consumo
+ls()
+what = character() 
+frec <- table(Consumo); frec
+prop <- table(Consumo)/length(Consumo); prop
+summary(Consumo)
+barplot(frec, main="Gráfico de barras", xlab=" Consumo", col=c("purple", "blue", "black"), sub="Agosto-2012")
+barplot(prop, main="Gráfico de barras", xlab=" Consumo\n", col=c("purple", "blue", "black"), sub="Agosto-2012") 
+pie(frec, main="Gráfico de pastel", xlab="Tipo de Consumo", col=c("purple", "blue", "black"), sub="Agosto-2012")
+@
+
+
+\end{document}

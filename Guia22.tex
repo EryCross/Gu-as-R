@@ -1,0 +1,130 @@
+\documentclass[10pt,a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\maketitle
+\newpage
+
+
+PRUEBA DE HIPÓTESIS SOBRE UNA MEDIA, VARIANZA CONOCIDA.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{X} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{9.0}\hlstd{,} \hlnum{3.41}\hlstd{,} \hlnum{6.13}\hlstd{,} \hlnum{1.99}\hlstd{,} \hlnum{6.92}\hlstd{,} \hlnum{3.12}\hlstd{,} \hlnum{7.86}\hlstd{,} \hlnum{2.01}\hlstd{,} \hlnum{5.98}\hlstd{,}
+       \hlnum{4.15}\hlstd{,} \hlnum{6.87}\hlstd{,} \hlnum{1.97}\hlstd{,} \hlnum{4.01}\hlstd{,} \hlnum{3.56}\hlstd{,} \hlnum{8.04}\hlstd{,} \hlnum{3.24}\hlstd{,} \hlnum{5.05}\hlstd{,} \hlnum{7.37}\hlstd{)}
+
+
+\hlcom{#x es la media del problema, des es la desviación vec el vector}
+\hlstd{Prueba.param} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{,} \hlkwc{des}\hlstd{,} \hlkwc{VEC}\hlstd{,} \hlkwc{H1}\hlstd{=}\hlstr{"Distinto"}\hlstd{,} \hlkwc{alfa}\hlstd{=}\hlnum{0.05}\hlstd{)\{}
+  \hlstd{op} \hlkwb{<-} \hlkwd{options}\hlstd{();}
+  \hlkwd{options}\hlstd{(}\hlkwc{digits}\hlstd{=}\hlnum{2}\hlstd{)}
+  \hlstd{miu}\hlkwb{<-} \hlkwd{mean}\hlstd{(VEC)}
+  \hlstd{RC}\hlkwb{<-} \hlnum{1.645}
+  \hlstd{L}\hlkwb{<-} \hlkwd{length}\hlstd{(VEC)}
+  \hlstd{Zo}\hlkwb{<-}\hlstd{(miu}\hlopt{-}\hlstd{x)}\hlopt{/}\hlstd{(((des}\hlopt{^}\hlnum{2}\hlstd{)}\hlopt{/}\hlstd{L)}\hlopt{^}\hlstd{(}\hlnum{0.5}\hlstd{))}
+  \hlstd{Z}\hlkwb{<-} \hlnum{1.645}
+
+  \hlkwa{if} \hlstd{(H1} \hlopt{==} \hlstr{"Menor"}\hlstd{)}
+  \hlstd{\{}
+    \hlkwa{if} \hlstd{(Zo} \hlopt{< -}\hlstd{Z) decision} \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlstr{"Como Estadistico <"}\hlstd{,} \hlkwd{round}\hlstd{(}\hlopt{-}\hlstd{Z,}\hlnum{3}\hlstd{),} \hlstr{", entonces rechazamos Ho"}\hlstd{)}
+    \hlkwa{else} \hlstd{decision} \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlstr{"Como Estadistico>="}\hlstd{,} \hlkwd{round}\hlstd{(}\hlopt{-}\hlstd{Z,}\hlnum{3}\hlstd{),} \hlstr{", entonces aceptamos Ho"}\hlstd{)}
+  \hlstd{\}}
+  \hlkwa{if} \hlstd{(H1} \hlopt{==} \hlstr{"Mayor"}\hlstd{)}
+  \hlstd{\{}
+    \hlkwa{if} \hlstd{(Zo} \hlopt{>} \hlstd{Z) decision} \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlstr{"Como Estadistico >"}\hlstd{,} \hlkwd{round}\hlstd{(Z,}\hlnum{3}\hlstd{),} \hlstr{", entonces rechazamos Ho"}\hlstd{)}
+    \hlkwa{else} \hlstd{decision} \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlstr{"Como Estadistico <="}\hlstd{,} \hlkwd{round}\hlstd{(Z,}\hlnum{3}\hlstd{),} \hlstr{", entonces aceptamos Ho"}\hlstd{)}
+  \hlstd{\}}
+  \hlkwa{if} \hlstd{(H1} \hlopt{==} \hlstr{"Distinto"}\hlstd{)}
+  \hlstd{\{}
+    \hlkwa{if} \hlstd{(Zo} \hlopt{< -}\hlstd{Z) decision} \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlstr{"Como Estadistico <"}\hlstd{,} \hlkwd{round}\hlstd{(}\hlopt{-}\hlstd{Z,}\hlnum{3}\hlstd{),} \hlstr{", entonces rechazamos Ho"}\hlstd{)}
+    \hlkwa{if} \hlstd{(Zo} \hlopt{>} \hlstd{Z) decision} \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlstr{"Como Estadistico >"}\hlstd{,} \hlkwd{round}\hlstd{(Z,}\hlnum{3}\hlstd{),} \hlstr{", entonces rechazamos Ho"}\hlstd{)}
+    \hlkwa{else} \hlstd{decision} \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlstr{"Como Estadistico pertenece a ["}\hlstd{,} \hlkwd{round}\hlstd{(}\hlopt{-}\hlstd{Z,}\hlnum{3}\hlstd{),} \hlstr{","}\hlstd{,} \hlkwd{round}\hlstd{(Z,}\hlnum{3}\hlstd{),} \hlstr{"],
+                           entonces aceptamos Ho"}\hlstd{)}
+  \hlstd{\}} \hlcom{# esto para llevar a cabo los contraste de hipótesis}
+
+  \hlkwd{print}\hlstd{(decision)}
+  \hlkwd{options}\hlstd{(op)} \hlcom{# restablece todas las opciones iniciales}
+  \hlstd{\}}
+
+\hlkwd{Prueba.param}\hlstd{(}\hlnum{4}\hlstd{,} \hlnum{2.45}\hlstd{, X,} \hlkwc{H1}\hlstd{=}\hlstr{"Mayor"}\hlstd{,} \hlkwc{alfa}\hlstd{=}\hlnum{0.05}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] "Como Estadistico > 1.645 , entonces rechazamos Ho"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{t.test}\hlstd{(X,}\hlkwc{mu}\hlstd{=}\hlnum{4}\hlstd{,}\hlkwc{alternative}\hlstd{=}\hlstr{"greater"}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	One Sample t-test
+## 
+## data:  X
+## t = 1.9291, df = 17, p-value = 0.03529
+## alternative hypothesis: true mean is greater than 4
+## 95 percent confidence interval:
+##  4.101959      Inf
+## sample estimates:
+## mean of x 
+##  5.037778
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{document}

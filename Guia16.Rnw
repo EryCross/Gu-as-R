@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+
+UNIDAD 3: Practica 16 - Simulacion del Teorema del L?mite Central 
+TEOREMA DEL LIMITE CENTRAL
+
+Simular el Teorema del L?mite Central con datos binomial
+
+Ejemplo 1:
+<<>>=
+#Generar 100 n?meros aleatorios de una distribuci?n binomial con par?metros 
+#n=10 (n?mero de ensayos o pruebas), y p=0.25 (probabilidad de ?xito) 
+                                                                                  
+# tm= tama?o de la muestra 
+tm=100; n <- 10; p <- 0.25 
+
+#Generando las 100 n?meros aleatorios 
+S = rbinom(tm, n, p) 
+
+# estandarizando cada una de las observaciones 
+Z = (S-n*p)/sqrt(n*p*(1-p)); Z 
+
+#La variable X tiene los resultados, y podemos ver ladistribuci?n de los n?meros aleatorios en X con 
+#un histograma
+hist(Z, main="Histograma de Z ~ N(0, 1)", xlab="z = n?mero binomiales est?ndarizados", 
+ylab="f(z)", prob=TRUE, col="cyan") 
+
+@
+
+
+Simular el TLC con datos de una distribucion normal
+Ejemplo 2: 
+<<>>=
+#Suponga que  i Xes normal con media  5 ??= y desviaci?n est?ndar  5 ??= . 
+#Entonces necesitamos una funci?n para encontrar el valor 
+simulNorm <- function(mu,sigma, m=5, n=100) 
+{ 
+  vectMedias <<- numeric(0) 
+  MediasEstand <<- numeric(0) 
+  for (i in 1:m) 
+  { 
+    X = rnorm(n, mu, sigma) 
+    # genera n valores normales 
+    vectMedias[i] <<- mean(X) 
+    MediasEstand[i] <<- (vectMedias[i] - mu)/(sigma/sqrt(n)) 
+  } 
+} 
+mu=5; sigma=5 
+m <- 200          
+
+# n?mero de muestras o medias a obtener 
+simulNorm(mu, sigma, m) 
+hist(MediasEstand, main="Histograma de medias est?ndarizadas", xlab="Valores de m 
+medias normales est?ndarizadas", prob=TRUE, col="darkolivegreen3") 
+
+#Un mejor gr?fico que el histograma para decidir si los datos aleatorios son aproximadamente 
+#normal es el llamado gr?fico de "probabilidad normal".
+qqnorm(MediasEstand, main="X ~ N(0, 1)") 
+
+#muestra la l?nea 
+qqline(MediasEstand, lty=1, lwd=2, col="red")
+curve(dnorm(x, 0, 1), col = "deeppink3", lty=2, lwd=2, add=TRUE)
+
+#Simular el Teorema del L?mite Central con datos exponencial
+simulExp <- function(mu, m=5, n=100) 
+{ 
+  razon <- 1/mu 
+  vectMedias <<- numeric(0) 
+  MediasEstand <<- numeric(0) 
+  for (i in 1:m) 
+  { 
+    X = rexp(n, razon) 
+    # genera n valores exponenciales 
+    vectMedias[i] <<- mean(X) 
+    MediasEstand[i] <<- (vectMedias[i] - mu)/(mu/sqrt(n)) 
+  } 
+}
+
+par(mfrow=c(2,2))
+# para n=1 
+mu=10 
+m <- 100; n <- 1 
+simulExp(mu, m, n) 
+hist(MediasEstand, main="Medias Exp(10); n=1", xlab="m medias exp est?ndarizadas", 
+prob=TRUE, col="darkolivegreen3") 
+xvals = seq(from=-3, to=3, by=0.01) 
+points(xvals, dnorm(xvals, 0, 1), col = "red", type="l", lty=1, lwd=2)
+
+# para n=5 
+n <- 5 
+simulExp(mu, m, n) 
+hist(MediasEstand, main="Medias Exp(10); n=5", xlab="m medias exp est?ndarizadas", 
+prob=TRUE, col="darkolivegreen3") 
+xvals = seq(from=-3, to=3, by=0.01) 
+points(xvals, dnorm(xvals, 0, 1), col = "red", type="l", lty=1, lwd=2)
+
+# para n=15 
+n <- 15 
+simulExp(mu, m, n) 
+hist(MediasEstand, main="Medias Exp(10); n=15", xlab="m medias exp est?ndarizadas", 
+     prob=TRUE, col="darkolivegreen3") 
+xvals = seq(from=-3, to=3, by=0.01) 
+points(xvals, dnorm(xvals, 0, 1), col = "red", type="l", lty=1, lwd=2)
+
+# para n=50 
+n <- 50 
+simulExp(mu, m, n) 
+hist(MediasEstand, main="Medias Exp(10); n=50", xlab="m medias exp est?ndarizadas", 
+prob=TRUE, col="darkolivegreen3") 
+xvals = seq(from=-3, to=3, by=0.01) 
+points(xvals, dnorm(xvals, 0, 1), col = "red", type="l", lty=1, lwd=2)
+@
+
+
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+
+Práctica 03 - Tipos de objetos: 
+factores, listas y hojas de datos, operadores y funciones que operan sobre ellos
+
+
+1.FACTORES NOMINALES Y ORDINALES. 
+
+FACTORES NOMINALES.
+
+<<>>=
+sexo <- c("M", "F", "F", "M", "F", "F", "M"); sexo
+edad <- c(19, 20, 19, 22, 20, 21, 19); edad
+FactorSexo = factor(sexo); FactorSexo
+levels(FactorSexo)
+mediaEdad <- tapply(edad, FactorSexo, mean); mediaEdad
+is.vector(mediaEdad); is.matrix(mediaEdad); is.list(mediaEdad)
+is.table(mediaEdad); is.array(mediaEdad)
+@
+
+FACTORES ORDINALES
+<<>>=
+lista1<-list(padre="Pedro", madre="María", no.hijos=3, edad.hijos=c(4,7,9)) 
+is.matrix(lista1);  is.vector(lista1$edad.hijos)
+lista1[1]
+lista1["padre"]
+lista1[[2]]
+lista1["madre"] 
+lista1[[1]]
+lista1[[4]][2]
+lista1$padre
+
+lista1[["madre"]]
+x <- "no.hijos";  lista1[x]
+subLista <- lista1[4]; subLista
+lista1[5] <- list(sexo.hijos=c("F", "M", "F")); lista1
+@
+
+<<>>=
+log <- sample(c(TRUE, FALSE), size = 20, replace = T); log
+comp <- rnorm(20) + runif(20) * (1i); comp 
+num <- rnorm(20, mean=0, sd=1); num 
+df1 <- data.frame(log, comp, num); df1 
+
+nombres <- c("logico", "complejo", "numerico") 
+names(df1) <- nombres; df1
+
+row.names(df1) <- letters[1:20]; df1 
+
+edad <- c(18, 21, 45, 54); edad
+datos <- matrix(c(150, 160, 180, 205, 65, 68, 65, 69), ncol=2, dimnames=list(c(), c("Estatura","Peso"))); datos
+sexo <- c("F", "M", "M", "M"); sexo
+
+hoja1$Edad
+search()
+@
+
+
+\end{document}

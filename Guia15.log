@@ -1,0 +1,896 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.10)  27 NOV 2015 19:50
+entering extended mode
+**Guia15.tex
+("C:\Users\Ery\Desktop\PDF R\Guia15.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Users\Ery\Desktop\PDF R\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen105
+\fb@frh=\dimen106
+\FrameRule=\dimen107
+\FrameSep=\dimen108
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen109
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks18
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks19
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks20
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+("C:\Users\Ery\Desktop\PDF R\Guia15.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen118
+\scratchbox=\box28
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen119
+\MPnumerator=\count104
+\makeMPintoPDFobject=\count105
+\everyMPtoPDFconversion=\toks23
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Package color Info: Redefining color shadecolor on input line 68.
+
+Overfull \hbox (97.73227pt too wide) in paragraph at lines 70--70
+[][]\OT1/cmtt/m/it/10 #Una persona informal hace esperar a su pareja aleatoriam
+ente entre 0 y 90 minutos. [][] 
+ []
+
+
+Overfull \hbox (87.23236pt too wide) in paragraph at lines 71--71
+[][]\OT1/cmtt/m/it/10 #Harto de esta situaci?n, la persona que sufre la espera 
+se plantea un ultim?tum; [][] 
+ []
+
+
+Overfull \hbox (71.4825pt too wide) in paragraph at lines 72--72
+[][]\OT1/cmtt/m/it/10 #s? al d?a siguiente su pareja tarda menos de 15 minutos 
+mantiene la relaci?n, [][] 
+ []
+
+
+Overfull \hbox (66.23254pt too wide) in paragraph at lines 73--73
+[][]\OT1/cmtt/m/it/10 #s? la espera est? entre 15 y 55 minutos, decide en la si
+guiente cita con los [][] 
+ []
+
+
+Overfull \hbox (87.23236pt too wide) in paragraph at lines 74--74
+[][]\OT1/cmtt/m/it/10 #mismos criterios, mientras que si tarda m?s de 55 minuto
+s la relaci?n termina en [][] 
+ []
+
+
+Overfull \hbox (76.73245pt too wide) in paragraph at lines 77--77
+[][]\OT1/cmtt/m/it/10 #a) Calcule la probabilidad de que la relaci?n contin?e h
+astala siguiente cita. [][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 81.
+
+Overfull \hbox (45.23273pt too wide) in paragraph at lines 87--87
+[][]\OT1/cmtt/m/it/10 #b) Calcule la probabilidad de que la relaci?n termine en
+ la segunda cita.[][] 
+ []
+
+
+Overfull \hbox (60.98259pt too wide) in paragraph at lines 102--102
+[][]\OT1/cmtt/m/it/10 #luego multiplicando ambas probabilidades se obtiene el v
+alor pedido 0.1728. [][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 113.
+
+Overfull \hbox (24.23291pt too wide) in paragraph at lines 115--115
+[][]\OT1/cmtt/m/it/10 #Una empresa esta buscando personal para su departamento 
+de mercadeo. [][] 
+ []
+
+
+Overfull \hbox (3.2331pt too wide) in paragraph at lines 116--116
+[][]\OT1/cmtt/m/it/10 #El perfil solicitado es el de sujetos extrovertidos y cr
+eativos. [][] 
+ []
+
+
+Overfull \hbox (3.2331pt too wide) in paragraph at lines 117--117
+[][]\OT1/cmtt/m/it/10 #Se han presentado 50 candidatos y la empresa ha establec
+ido como [][] 
+ []
+
+
+Overfull \hbox (81.9824pt too wide) in paragraph at lines 118--118
+[][]\OT1/cmtt/m/it/10 #criterio de selecci?n que los candidatos superen el perc
+entil 80 en creatividad [][] 
+ []
+
+
+Overfull \hbox (92.48232pt too wide) in paragraph at lines 119--119
+[][]\OT1/cmtt/m/it/10 #y extroversi?n. Sabiendo que la variable extroversi?n (X
+) se distribuye seg?n una [][] 
+ []
+
+
+Overfull \hbox (45.23273pt too wide) in paragraph at lines 120--120
+[][]\OT1/cmtt/m/it/10 #Normal de media 5 y desviaci?n t?pica 1, que la variable
+ creatividad (Y) [][] 
+ []
+
+
+Overfull \hbox (55.73264pt too wide) in paragraph at lines 125--125
+[][]\OT1/cmtt/m/it/10 #P(X ??? P80 ??? Y ??? P80) = P(X ??? P80) P(Y ??? P80)= 
+(0.20)(0.20)=0.04. [][] 
+ []
+
+
+Overfull \hbox (97.73227pt too wide) in paragraph at lines 126--126
+[][]\OT1/cmtt/m/it/10 #Como se han presentado 50 aspirantes, ser?n seleccionada
+s (50) (0.04)= 2 personas. [][] 
+ []
+
+
+Overfull \hbox (160.73172pt too wide) in paragraph at lines 128--128
+[][]\OT1/cmtt/m/it/10 #b) ?Qu? puntuaciones debe superar un aspirante en creati
+vidad y extroversi?n para ser admitido?[][] 
+ []
+
+
+Overfull \hbox (87.23236pt too wide) in paragraph at lines 145--145
+[][]\OT1/cmtt/m/it/10 #c) Si se extraen al azar 16 candidatos, ?cu?l es la prob
+abilidad de que su media [][] 
+ []
+
+[2]
+Package color Info: Redefining color shadecolor on input line 159.
+
+Overfull \hbox (66.23254pt too wide) in paragraph at lines 163--163
+[][]\OT1/cmtt/m/it/10 #a) ?Cu?l es la probabilidad de que dure al menos 5 a?os?
+ ?y menos de 3 a?os? [][] 
+ []
+
+
+Overfull \hbox (192.23145pt too wide) in paragraph at lines 180--180
+[][]\OT1/cmtt/m/it/10 #b) Si han transcurrido ya 4 a?os desde su implantaci?n, 
+?cu?l es la probabilidad de que dure otros 4?[][] 
+ []
+
+
+Overfull \hbox (160.73172pt too wide) in paragraph at lines 187--187
+[][]\OT1/cmtt/m/it/10 #c) ?Cu?nto tiempo deber?a funcionar un marcapasos para e
+star entre el 10% de los que m?s duran?[][] 
+ []
+
+
+Overfull \hbox (97.73227pt too wide) in paragraph at lines 196--196
+[][]\OT1/cmtt/m/it/10 #d) Calcular el valor que deben tener a y b para que  P(x
+ < a )=0.5 y  P(x > b)=0.32[][] 
+ []
+
+[3]
+Package color Info: Redefining color shadecolor on input line 222.
+
+Overfull \hbox (34.73282pt too wide) in paragraph at lines 224--224
+[][]\OT1/cmtt/m/it/10 #Generar 100 n?meros aleatorios de una distribuci?n Unifo
+rme en [-2, 4] [][] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##   [1]  3.81970921  3.42344671  0.68028756  2.85710483  0.
+86161155[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##   [6] -0.10356160  0.94804666  0.70855223  1.51878021  0.
+31779432[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [11] -1.45219109 -1.00489845 -1.23199360  0.77586313 -1.
+07201188[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [16]  0.25982444 -0.16187620 -0.16476409  0.87537930  0.
+29263473[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [21] -0.51793991  3.48011049 -0.02129767  1.61462834  1.
+06964777[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [26] -0.26133118  1.21097333 -1.86111975  1.32378095  0.
+96700157[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [31]  0.52866131 -0.74604258 -1.04556883  1.32670522  1.
+00409266[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [36]  3.03478569  1.36840231  3.61482371 -0.18205365  1.
+94929561[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [41] -0.56271758 -0.22513958  1.02440964  1.95226237 -1.
+06630512[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [46]  0.10675079  1.34291543 -0.02636565  2.34492836  3.
+13116203[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [51]  1.31330019  1.51265841 -1.20927482  3.70024679 -1.
+23161260[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [56]  0.49964533  0.34865532 -1.39250274 -0.79498227  0.
+69057505[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [61]  0.69550494  2.61101560  0.17691932  3.53614203 -1.
+29898327[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [66]  3.29317969  2.97245616  2.90138494 -0.98595574  1.
+29052762[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [71]  3.59268505 -0.55321030  3.73827497 -0.05134817 -1.
+59610442[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [76]  1.76537656  2.26415426  1.20805048  3.28573639  2.
+79413910[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [81]  2.09592298  0.44706239  2.80329500  1.30961489 -1.
+86303326[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [86] -0.18110779  2.54330526  2.91036578 -1.78664146 -1.
+72212409[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [91]  1.01878449  3.72274504  3.50832468 -1.27523900  2.
+62132125[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 253--253
+[]\OT1/cmtt/m/n/10 ##  [96]  3.21123232 -0.42331226  1.50718414  1.03912592  3.
+44502846[] 
+ []
+
+
+Overfull \hbox (101.24611pt too wide) in paragraph at lines 256--256
+[][]\OT1/cmtt/m/n/10 hist[][](x,[] []main[][]=[][]"X ~ Uniforme(min=-2, max=4"[
+][],[] []xlab[][]=[][]"X"[][],[] []ylab[][]=[][]"densidad de probabilidad"[][],
+[][] 
+ []
+
+
+Overfull \hbox (76.73245pt too wide) in paragraph at lines 259--259
+[][]\OT1/cmtt/m/it/10 #Graficar la funci?n de densidad, use la funci?n curve() 
+para variable continua [][] 
+ []
+
+<figure/unnamed-chunk-4-1.pdf, id=16, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-4-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-4-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-4-1.pdf used on input line 263.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 263--264
+[][] 
+ []
+
+[4]
+Package color Info: Redefining color shadecolor on input line 269.
+
+Overfull \hbox (118.73209pt too wide) in paragraph at lines 271--271
+[][]\OT1/cmtt/m/it/10 #Supongamos que tenemos una muestra de tama?on=200 perten
+eciente a una poblaci?n normal [][] 
+ []
+
+
+Overfull \hbox (122.24593pt too wide) in paragraph at lines 278--278
+[][]\OT1/cmtt/m/n/10 hist[][](x.norm,[] []breaks[] []=[] []"Sturges"[][],[] []f
+req[] []=[] []TRUE[][],[] []probability[] []=[] []FALSE[][],[] []include.lowest
+[] []=[] []TRUE[][],[][] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 279--279
+[][]\OT1/cmtt/m/n/10 right[][]=[] []TRUE[][],[] []density[] []=[] []NULL[][],[]
+ []angle[] []=[] []45[][],[] []col[] []=[] []"steelblue1"[][],[] []border[] []=
+[] []NULL[][],[][] 
+ []
+
+
+Overfull \hbox (85.49625pt too wide) in paragraph at lines 280--280
+[][]\OT1/cmtt/m/n/10 main[] []=[] []"Histograma de datos observados"[][],[] []a
+xes[] []=[] []TRUE[][],[] []plot[] []=[] []TRUE[][],[] []labels[] []=[] []FALSE
+[][])[][] 
+ []
+
+<figure/unnamed-chunk-5-1.pdf, id=20, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-5-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf used on input line 283.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 283--284
+[][] 
+ []
+
+[5 <C:/Users/Ery/Desktop/PDF R/figure/unnamed-chunk-4-1.pdf>]
+Overfull \hbox (207.98131pt too wide) in paragraph at lines 285--285
+[][]\OT1/cmtt/m/it/10 # Podemos estimar la densidad de frecuencia usando la fun
+ci?n density() y plot() para dibujar su gr?fica [][] 
+ []
+
+<figure/unnamed-chunk-5-2.pdf, id=30, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-5-2.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-5-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-5-2.pdf used on input line 289.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 289--290
+[][] 
+ []
+
+[6 <C:/Users/Ery/Desktop/PDF R/figure/unnamed-chunk-5-1.pdf>]
+Overfull \hbox (60.98259pt too wide) in paragraph at lines 291--291
+[][]\OT1/cmtt/m/it/10 # R permite calcular la funci?n de distribuci?n acumulada
+ te?rica con ecdf() [][] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 292--292
+[][]\OT1/cmtt/m/n/10 plot[][]([][]ecdf[][](x.norm),[][]main[][]=[][]"Funci?n de
+ distribuci?n acumulada te?rica"[][])[][] 
+ []
+
+<figure/unnamed-chunk-5-3.pdf, id=40, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-5-3.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-5-3.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-5-3.pdf used on input line 295.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 295--296
+[][] 
+ []
+
+[7 <C:/Users/Ery/Desktop/PDF R/figure/unnamed-chunk-5-2.pdf>]
+Package color Info: Redefining color shadecolor on input line 301.
+
+Overfull \hbox (181.73154pt too wide) in paragraph at lines 303--303
+[][]\OT1/cmtt/m/it/10 #Generar 100 n?meros aleatorios de una distribuci?n Norma
+l con media 4.5 y desviaci?n est?ndar 0.75 [][] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##   [1] 4.429338 4.265500 5.703503 6.915353 4.542177 3.9539
+54 5.010443[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##   [8] 4.246002 4.315193 4.711716 3.909676 4.677137 3.1486
+30 2.965990[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [15] 4.810213 4.077164 3.756052 4.141245 5.098877 4.4871
+49 5.390029[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [22] 5.080080 3.025334 3.344975 4.615169 4.060546 6.7257
+14 4.380379[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [29] 4.838427 5.223491 6.826793 3.428595 3.827121 4.4098
+24 4.531692[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [36] 5.294828 3.090587 3.710270 5.620900 4.547597 4.5705
+58 4.112480[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [43] 4.728451 4.141836 5.896649 4.664670 5.475036 3.1322
+98 4.353513[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [50] 5.515823 5.171826 5.807158 6.140113 4.788365 5.3496
+74 3.694043[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [57] 6.009055 4.123640 5.188616 4.384684 3.608607 4.8678
+34 4.775455[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [64] 5.411493 5.703831 6.130846 2.982866 4.558613 3.1631
+25 5.039655[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [71] 5.227904 4.740599 4.002800 3.855175 4.607228 4.8160
+54 4.728449[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [78] 5.666212 4.155624 3.959455 5.205610 5.884785 4.5873
+04 4.229472[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [85] 4.157687 4.471228 5.185206 4.829999 4.842317 4.7013
+32 3.397415[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 327--327
+[]\OT1/cmtt/m/n/10 ##  [92] 4.238022 5.184821 4.800458 4.722342 4.042401 4.5611
+83 4.706475[] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 330--330
+[][]\OT1/cmtt/m/n/10 hist[][](x,[][]main[][]=[][]expression[][]([][]paste[][]([
+][]"X ~ N("[][], mu,[] []" = 4.5, "[][], sigma,[] []" = 0.75)"[][])),[][] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 331--331
+[][]\OT1/cmtt/m/n/10 xlab[][]=[][]"X"[][],[] []ylab[][]=[][]"densidad de probab
+ilidad"[][],[] []probability[][]=[][]TRUE[][],[] []col[][]=[][]gray[][]([][]0.9
+[][]))[][] 
+ []
+
+
+Overfull \hbox (18.98296pt too wide) in paragraph at lines 333--333
+[][]\OT1/cmtt/m/it/10 # Graficar la funci?n de densidad te?rica, usando la func
+i?n curve() [][] 
+ []
+
+[8 <C:/Users/Ery/Desktop/PDF R/figure/unnamed-chunk-5-3.pdf>]
+<figure/unnamed-chunk-6-1.pdf, id=60, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf used on input line 337.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 337--338
+[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 343.
+
+Overfull \hbox (165.98167pt too wide) in paragraph at lines 345--345
+[][]\OT1/cmtt/m/it/10 #Generar n?meros aleatorios de una distribuci?n exponenci
+al. Por ejemplo, si la vida media de un [][] 
+ []
+
+
+Overfull \hbox (192.23145pt too wide) in paragraph at lines 346--346
+[][]\OT1/cmtt/m/it/10 #bulbo de luz es 2500 horas, uno puede pensar que el tiem
+po de vida es aleatorio con una distribuci?n [][] 
+ []
+
+
+Overfull \hbox (55.73264pt too wide) in paragraph at lines 347--347
+[][]\OT1/cmtt/m/it/10 #exponencial que tiene media 2500. El ?nico par?metro es 
+la raz?n = 1/media.[][] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##   [1]  2486.630417   301.215268  5126.382760  3455.666839
+   426.861849[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##   [6]   746.031021  2205.725843  6759.465630  3406.705444
+   490.953317[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [11]  1593.325128  6322.284932  1266.337290  4176.060539
+  1489.167887[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [16]  2671.999703  3314.607574 11782.773779  1697.371064
+   129.232030[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [21]  1228.139448  2059.389474  3639.816858   169.053732
+   343.585920[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [26]  1539.310581   149.186913  1851.334072  3770.575858
+  2347.165856[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [31]  3018.558244  1713.549357  6866.956460 13765.299585
+  1527.245310[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [36]  7978.475447  1706.892384  4120.193398   273.621884
+  1925.811728[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [41]  4309.080853   193.666110  2079.109604   542.952684
+  1287.599169[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [46]  1010.417130  4820.496712   558.549266  2319.654913
+  1894.919406[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [51]  6204.069624   937.842255  5953.921326  6843.005265
+   649.842217[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [56]   133.637799  4650.050406  2247.496110  6166.510447
+  3511.324243[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [61]  3797.790585  1545.393717   381.456846  1579.576721
+  1701.857761[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [66]   561.996764   967.008476  5271.816034   372.820594
+  2000.882970[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [71]  2665.432335   325.258437   359.615904  1834.241506
+    36.791353[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [76]  2087.709587  2941.752267  2033.767111   612.340065
+     1.369687[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [81]  1168.955170  1708.741133   707.939303  2680.881987
+  1782.472350[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [86]  4987.815255   627.729825  3723.657610  3793.557985
+   742.334272[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [91]  2078.841443  1953.794332    90.696266  1853.510088
+  8364.158533[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 376--376
+[]\OT1/cmtt/m/n/10 ##  [96]  1576.392432   933.048576   854.814297   223.194397
+   210.448146[] 
+ []
+
+[9 <C:/Users/Ery/Desktop/PDF R/figure/unnamed-chunk-6-1.pdf>]
+<figure/unnamed-chunk-7-1.pdf, id=70, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-7-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-7-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf used on input line 386.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 386--387
+[][] 
+ []
+
+[10]
+Package color Info: Redefining color shadecolor on input line 393.
+
+Overfull \hbox (3.23366pt too wide) in paragraph at lines 390--393
+[]\OT1/cmr/m/n/10 4. FUN-CIONES DE DIS-TRIBU-CION Y SU IN-VERSA (LOS CUAN-TILES
+).
+ []
+
+Package color Info: Redefining color shadecolor on input line 406.
+
+Overfull \hbox (176.48158pt too wide) in paragraph at lines 408--408
+[][]\OT1/cmtt/m/it/10 #Para una variable aleatoria con distribuci?n normal est?
+ndar, encontrar P[Z ??? 0.7 ] y P[Z> 0.7].[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 427.
+[11 <C:/Users/Ery/Desktop/PDF R/figure/unnamed-chunk-7-1.pdf>]
+Overfull \hbox (87.23236pt too wide) in paragraph at lines 429--429
+[][]\OT1/cmtt/m/it/10 #?Qu? valor de una variable aleatoria con distribuci?n no
+rmal est?ndar, tiene 75% [][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 442.
+
+Overfull \hbox (87.23236pt too wide) in paragraph at lines 444--444
+[][]\OT1/cmtt/m/it/10 #?Cu?l es la probabilidad a la derecha de 18.55 para una 
+Variable aleatoria X con [][] 
+ []
+
+[12] ("C:\Users\Ery\Desktop\PDF R\Guia15.aux") ) 
+Here is how much of TeX's memory you used:
+ 2223 strings out of 493921
+ 28511 string characters out of 3144882
+ 87085 words of memory out of 3000000
+ 5495 multiletter control sequences out of 15000+200000
+ 8920 words of font info for 35 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,7n,24p,298b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Guia15.pdf (12 pages, 137150 bytes).
+PDF statistics:
+ 103 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

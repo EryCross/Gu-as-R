@@ -1,0 +1,217 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+UNIDAD 3: Pr?ctica 15 - Distribuciones de probabilidad continuas.
+
+CALCULO DE PROBABILIDADES
+Ejemplo 1: 
+<<>>=
+#Una persona informal hace esperar a su pareja aleatoriamente entre 0 y 90 minutos. 
+#Harto de esta situaci?n, la persona que sufre la espera se plantea un ultim?tum; 
+#s? al d?a siguiente su pareja tarda menos de 15 minutos mantiene la relaci?n, 
+#s? la espera est? entre 15 y 55 minutos, decide en la siguiente cita con los 
+#mismos criterios, mientras que si tarda m?s de 55 minutos la relaci?n termina en 
+#ese momento. 
+
+#a) Calcule la probabilidad de que la relaci?n contin?e hastala siguiente cita. 
+x <- 55; a=0; b <- 90 
+
+#usando la funci?n propia de R 
+punif(x, min=a, max=b, lower.tail=TRUE)
+
+#b) Calcule la probabilidad de que la relaci?n termine en la segunda cita.
+F55=punif(55, min=a, max=b, lower.tail=TRUE) 
+F15=punif(15, min=a, max=b, lower.tail=TRUE) 
+F55-F15
+F55=punif(55, min=a, max=b, lower.tail=TRUE);F55
+
+#luego multiplicando ambas probabilidades se obtiene el valor pedido 0.1728. 
+(1-F55)*( F55-F15)
+
+@
+
+Ejemplo 2: 
+<<>>=
+
+#Una empresa esta buscando personal para su departamento de mercadeo. 
+#El perfil solicitado es el de sujetos extrovertidos y creativos. 
+#Se han presentado 50 candidatos y la empresa ha establecido como 
+#criterio de selecci?n que los candidatos superen el percentil 80 en creatividad 
+#y extroversi?n. Sabiendo que la variable extroversi?n (X) se distribuye seg?n una 
+#Normal de media 5 y desviaci?n t?pica 1, que la variable creatividad (Y) 
+#sigue una t-Student de 10 grados de libertad y que las 
+#puntuaciones de creatividad y extroversi?n son independientes: 
+
+#a) Cuantos candidatos seran seleccionados? 
+#P(X ??? P80 ??? Y ??? P80) = P(X ??? P80) P(Y ??? P80)= (0.20)(0.20)=0.04. 
+#Como se han presentado 50 aspirantes, ser?n seleccionadas (50) (0.04)= 2 personas. 
+
+#b) ?Qu? puntuaciones debe superar un aspirante en creatividad y extroversi?n para ser admitido?
+#y los cuantiles-normales para la variable X: 
+p <- c(0.80); media=5; d.t=1 
+qnorm(p, mean=media, sd=d.t, lower.tail=TRUE) 
+
+#y los cuantiles-t para la variable Y: 
+p <- c(0.80); g.l <- 10 
+qt(p, df=g.l, lower.tail=TRUE)
+
+#c) Si se extraen al azar 16 candidatos, ?cu?l es la probabilidad de que su media 
+#aritm?tica en extroversi?n sea mayor que 4.5? 
+#Como se desea calcular P(x???4.5): 
+n <- 16; x <- 4.5; mu=5; sigma=1; d.t=sigma/sqrt(n) 
+pnorm(x, mean=mu, sd=d.t, lower.tail=FALSE)
+
+@
+
+Ejemplo 3:
+<<>>=
+ #La duracion media de un modelo de marcapasos es de 7 a?os. 
+
+#a) ?Cu?l es la probabilidad de que dure al menos 5 a?os? ?y menos de 3 a?os? 
+#La probabilidad  P(x ??? 5) se obtiene as?: 
+  x <- 5; teta=7 
+pexp(x, rate=1/teta, lower.tail=FALSE) 
+
+#De igual forma  P(X < 3): 
+  x <- 3; teta=7 
+pexp(x, rate=1/teta, lower.tail=TRUE)
+
+#b) Si han transcurrido ya 4 a?os desde su implantaci?n, ?cu?l es la probabilidad de que dure otros 4?
+pexp(4, rate=1/teta, lower.tail=FALSE)
+
+#c) ?Cu?nto tiempo deber?a funcionar un marcapasos para estar entre el 10% de los que m?s duran?
+#Hay que calcular el percentil 90: 
+  p <- 0.9; teta <- 7 
+qexp(p, rate=1/teta, lower.tail=TRUE)
+
+#d) Calcular el valor que deben tener a y b para que  P(x < a )=0.5 y  P(x > b)=0.32
+qexp(0.5, rate=1/teta, lower.tail=TRUE) 
+#y en el segundo caso, el percentil 68, b = 7.97 
+qexp(0.68, rate=1/teta, lower.tail=TRUE) 
+#o de esta otra manera 
+qexp(0.32, rate=1/teta, lower.tail=FALSE)
+
+@
+
+3. GENERACION DE MUESTRAS ALEATORIAS DE LAS DISTRIBUCIONES
+Ejemplo 1: 
+<<>>=
+#Generar 100 n?meros aleatorios de una distribuci?n Uniforme en [-2, 4] 
+
+#Definir los par?metros apropiados 
+min <- -2; max <- 4 
+
+#Generar 100 n?meros aleatorios de la distribuci?n 
+x = runif(100, min, max); x 
+
+#Histograma para la nuestra aleatoria de tama?o 100 
+hist(x, main="X ~ Uniforme(min=-2, max=4", xlab="X", ylab="densidad de probabilidad", 
+     probability=TRUE, col="green") 
+
+#Graficar la funci?n de densidad, use la funci?n curve() para variable continua 
+curve(dunif(x, min, max), col="blue", add=TRUE)
+@
+
+Ejemplo 2: 
+<<>>=
+#Supongamos que tenemos una muestra de tama?on=200 perteneciente a una poblaci?n normal 
+#N(10,2) con ??=10 y ??=2:
+
+#genera los valores aleatorios de la distribuci?n 
+x.norm <- rnorm(n=200,mean=10, sd=2)
+
+# Podemos obtener un histograma usando la funci?n hist() 
+hist(x.norm, breaks = "Sturges", freq = TRUE, probability = FALSE, include.lowest = TRUE, 
+right= TRUE, density = NULL, angle = 45, col = "steelblue1", border = NULL, 
+main = "Histograma de datos observados", axes = TRUE, plot = TRUE, labels = FALSE)
+
+# Podemos estimar la densidad de frecuencia usando la funci?n density() y plot() para dibujar su gr?fica 
+plot(density(x.norm), main="Densidad estimada de los datos") 
+
+# R permite calcular la funci?n de distribuci?n acumulada te?rica con ecdf() 
+plot(ecdf(x.norm),main="Funci?n de distribuci?n acumulada te?rica")
+@
+
+Ejemplo 3: 
+<<>>=
+#Generar 100 n?meros aleatorios de una distribuci?n Normal con media 4.5 y desviaci?n est?ndar 0.75 
+
+# Definir los par?metros apropiados 
+media <- 4.5; desviacion <- 0.75 
+
+# generar 100 n?meros aleatorios de la distribuci?n 
+x = rnorm(100, media, desviacion); x 
+
+# Histograma para la nuestra aleatoria de tama?o 100 
+hist(x,main=expression(paste("X ~ N(", mu, " = 4.5, ", sigma, " = 0.75)")), 
+xlab="X", ylab="densidad de probabilidad", probability=TRUE, col=gray(0.9)) 
+
+# Graficar la funci?n de densidad te?rica, usando la funci?n curve() 
+curve(dnorm(x, media, desviacion), col="red", lwd=2, add=TRUE)
+
+@
+
+Ejemplo 4: 
+<<>>=
+#Generar n?meros aleatorios de una distribuci?n exponencial. Por ejemplo, si la vida media de un 
+#bulbo de luz es 2500 horas, uno puede pensar que el tiempo de vida es aleatorio con una distribuci?n 
+#exponencial que tiene media 2500. El ?nico par?metro es la raz?n = 1/media.
+
+# Definir el par?metro apropiado 
+media <- 2500; razon <- 1/media;n=100    
+
+# generar 100 n?meros aleatorios de la distribuci?n 
+x = rexp(n, razon); x 
+
+# Histograma para la nuestra aleatoria de tama?o 100 
+hist(x, main="X ~ Exponencial( media = 2500 )", xlab="X", 
+ylab="densidad de probabilidad", probability=TRUE, col="purple")
+
+# Graficar la funci?n de densidad, usando la funci?n curve() 
+curve(dexp(x, razon), col="blue", lwd=2, add=TRUE)
+@
+
+4. FUNCIONES DE DISTRIBUCION Y SU INVERSA (LOS CUANTILES).
+Ejemplo 1:Para una Variable aleatoria X con distribuci?n normal de media 1 y desviacion estandar 1, cual es la probabilidad de que sea menor que 0.7? 
+<<>>=
+x <- 0.7 
+p <- pnorm(x, mean=1, sd=1, lower.tail = TRUE); p 
+@
+
+Ejemplo 2:
+<<>>=
+#Para una variable aleatoria con distribuci?n normal est?ndar, encontrar P[Z ??? 0.7 ] y P[Z> 0.7].
+z <- 0.7 
+p1 <- pnorm(z, mean=0, sd=1); p1 
+p2 <- pnorm(z, mean=0, sd=1, lower.tail=FALSE); p2 
+
+@
+
+
+Ejemplo 3:
+<<>>=
+#?Qu? valor de una variable aleatoria con distribuci?n normal est?ndar, tiene 75% 
+#del ?rea a la izquierda?. 
+p <- 0.75 
+z <- qnorm(p, mean=0, sd=1, lower.tail = TRUE); z 
+@
+
+Ejemplo 4:
+<<>>=
+#?Cu?l es la probabilidad a la derecha de 18.55 para una Variable aleatoria X con 
+#distribuci?n Chi-cuadrado de 12 grados de libertad? 
+x <- 18.55; gl <- 12 
+p <- pchisq(x, gl, lower.tail = FALSE); p
+@
+
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Erika Martínez}
+\title{Guías prácticas}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+
+PRUEBA DE HIPÓTESIS SOBRE UNA MEDIA, VARIANZA CONOCIDA.
+<<>>=
+X <- c(9.0, 3.41, 6.13, 1.99, 6.92, 3.12, 7.86, 2.01, 5.98, 
+       4.15, 6.87, 1.97, 4.01, 3.56, 8.04, 3.24, 5.05, 7.37)
+
+
+#x es la media del problema, des es la desviación vec el vector
+Prueba.param <- function(x, des, VEC, H1="Distinto", alfa=0.05){
+  op <- options();
+  options(digits=2)
+  miu<- mean(VEC)
+  RC<- 1.645
+  L<- length(VEC)
+  Zo<-(miu-x)/(((des^2)/L)^(0.5))
+  Z<- 1.645
+ 
+  if (H1 == "Menor")
+  {
+    if (Zo < -Z) decision <- paste("Como Estadistico <", round(-Z,3), ", entonces rechazamos Ho")
+    else decision <- paste("Como Estadistico>=", round(-Z,3), ", entonces aceptamos Ho")
+  }
+  if (H1 == "Mayor")
+  {
+    if (Zo > Z) decision <- paste("Como Estadistico >", round(Z,3), ", entonces rechazamos Ho")
+    else decision <- paste("Como Estadistico <=", round(Z,3), ", entonces aceptamos Ho")
+  }
+  if (H1 == "Distinto")
+  {
+    if (Zo < -Z) decision <- paste("Como Estadistico <", round(-Z,3), ", entonces rechazamos Ho")
+    if (Zo > Z) decision <- paste("Como Estadistico >", round(Z,3), ", entonces rechazamos Ho")
+    else decision <- paste("Como Estadistico pertenece a [", round(-Z,3), ",", round(Z,3), "],
+                           entonces aceptamos Ho") 
+  } # esto para llevar a cabo los contraste de hipótesis
+  
+  print(decision)
+  options(op) # restablece todas las opciones iniciales
+  } 
+
+Prueba.param(4, 2.45, X, H1="Mayor", alfa=0.05)
+
+t.test(X,mu=4,alternative="greater") 
+
+@
+
+
+
+\end{document}
